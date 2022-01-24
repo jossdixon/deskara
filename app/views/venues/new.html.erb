@@ -1,0 +1,18 @@
+new
+
+<div class="container mt-5">
+  <h1>new venue</h1>
+  <%= simple_form_for @venue do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :rating %>
+    <%= f.input :size %>
+    <%= f.input :category %>
+    <%= f.input :wifi %>
+    <%= f.input :charging_outlet %>
+
+
+    <%= f.submit class:"btn btn-success btn-lg" %>
+    <%= link_to "Back", venues_path, class:"btn btn-success btn-lg"%>
+  <% end %>
+</div>
