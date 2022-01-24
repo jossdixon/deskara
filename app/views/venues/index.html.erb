@@ -1,0 +1,22 @@
+<div>
+ <div class="banner">
+  <div class="container pt-5 d-flex justify-content-between">
+    <div class="text-container">
+      <h1>Venue list</h1>
+      <h2> Add a venue</h2>
+      <%= link_to "New venue", new_venue_path,  class:"btn btn-info btn-lg mt-5"%>
+    </div>
+
+  </div>
+</div>
+
+<div class="container">
+  <h2 class="mt-2">The venues</h2>
+      <div>
+        <% @venues.each do |venue| %>
+          <div >
+              <%= link_to venue.name, venue_path(venue)  %> <%= link_to "", venue_path(venue), method: :delete, data: { confirm: 'Are you sure?'}, class:"delete fas fa-backspace"  %>
+          </div>
+         <% end %>
+      </div>
+</div>

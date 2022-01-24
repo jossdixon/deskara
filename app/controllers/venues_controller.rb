@@ -1,6 +1,6 @@
 class VenuesController < ApplicationController
   def index
-    @venues = List.all
+    @venues = Venue.all
   end
 
   def show
@@ -24,5 +24,10 @@ class VenuesController < ApplicationController
     @venue = Venue.find(params[:id])
     @venue.destroy
     redirect_to venues_path
+  end
+
+  private
+  def venue_params
+    params.require(:venue).permit(:name, :description, :address, :rating, :size, :categories, :wifi, :charging_outlet)
   end
 end
