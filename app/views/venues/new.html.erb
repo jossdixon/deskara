@@ -7,7 +7,7 @@ new
     <%= f.input :address %>
     <%= f.input :rating %>
     <%= f.input :size %>
-    <%= f.input :category %>
+    <%= f.input :category, collection: Venue::CATEGORIES, class: "form-control", placeholder: 'Pick one category' %>
     <%= f.input :wifi %>
     <%= f.input :charging_outlet %>
 
