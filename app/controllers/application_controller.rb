@@ -1,3 +1,4 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!
+  # The below commented out to prevent landing page authentication
+  # before_action :authenticate_user!
 end
