@@ -1,4 +1,6 @@
 class VenuesController < ApplicationController
+  before_action :authenticate_user!, only: [ :new, :destroy ]
+
   def index
     @venues = Venue.all
   end
